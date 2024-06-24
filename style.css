@@ -1,0 +1,159 @@
+:root {
+    --grey-900: #2A4144;
+    --grey-500: #86A2A5;
+    --white: #FFF;
+    --green-600: #0C7D69;
+    --green-200: #E0F1E8;
+    --red: #D73C3C;
+
+    --heading: 2rem; /*32px*/
+    --body-md: 1.125rem; /*32px*/
+    --body-sm: 1rem; /*32px*/
+
+    --S1600: 128px;
+    --S500: 40px; /*32px*/
+    --S400: 32px;
+    --S300: 24px;
+    --S200: 16px;
+    --S150: 12px;
+    --S100: 8px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, legend {
+    font-family: "Karla", sans-serif;
+    color: var(--grey-900);
+}
+
+h1 {
+    font-size: var(--heading);
+    line-height: 100%;
+    letter-spacing: -1px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--green-200);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 736px;
+    padding: var(--S500);
+    border-radius: var(--S100);
+    background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--S400);
+}
+
+form {
+    display: flex;
+    gap: var(--S300);
+    flex-direction: column;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+label {
+    font-size: var(--body-sm);
+    line-height: 150%;
+    display: flex;
+    gap: var(--S100);
+}
+
+label > span {
+    color: var(--green-600);
+}
+
+input,textarea {
+    padding: var(--S150) var(--S300);
+    border: 1px solid var(--grey-500);
+    border-radius: 8px;
+}
+
+input:hover, textarea:hover {
+    cursor: pointer;
+    border-color: var(--green-600);
+}
+
+input:invalid, textarea:invalid {
+    border-color: var(--red);
+}
+
+input:focus-within, textarea:focus-within {
+    outline-color: var(--green-600);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--S100);
+    flex: 1;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset > div {
+    display: flex;
+    gap: var(--S200);
+    flex-direction: column;;
+}
+
+fieldset input {
+    width: 18px;
+    height: 18px;
+}
+
+.input-radio {
+    border: 1px solid var(--grey-500);
+    border-radius: 8px;
+    padding: var(--S150) var(--S300);
+
+    display: flex;
+    align-items: center;
+    gap: var(--S150);
+
+    width: 100%;
+}
+
+textarea {
+    height: 105px;
+}
+
+.input-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--S200);
+}
+
+button {
+    background-color: var(--green-600);
+    color: var(--white);
+    font-size: var(--body-md);
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+
+    padding: var(--S200) var(--S500);
+}
+
+button:hover {
+    background-color: var(--grey-900);
+    cursor: pointer;
+}
